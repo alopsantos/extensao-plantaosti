@@ -93,7 +93,7 @@ function populateFarmacias() {
         console.log(farmacia)
         divPlantao.innerHTML += `
         <article class="farmacia-card">
-        <img width="100" height="100" src="assets/${farmacia.urllogo}" alt="${farmacia.name}"/>
+        <img width="100" height="100" src="${farmacia.urllogo}" alt="${farmacia.name}"/>
 
         <ul class="farmacias-card-info">
           <li class="ativo">
