@@ -1,7 +1,7 @@
 function populatePlantao() {
 
   const divPlantao = document.getElementById('plantaoCard')
-  const urlapi = "https://api.lopscorp.com/plantoes"
+  const urlapi = "https://api.lopscorp.com/plantao"
   fetch(urlapi)
     .then((res) => { return res.json() })
     .then((plantoes) => {
@@ -43,6 +43,7 @@ function populatePlantao() {
 populatePlantao()
 function populatePlantoes() {
   const divPlantao = document.getElementById('plantoes-card')
+  divPlantao.innerHTML = ''
   const urlapi = "https://api.lopscorp.com/plantoes"
   fetch(urlapi)
     .then((res) => { return res.json() })
@@ -50,7 +51,7 @@ function populatePlantoes() {
 
       for (const plantao of plantoes) {
         console.log(plantao)
-        divPlantao.innerHTML = `
+        divPlantao.innerHTML += `
         <article class="farmacia-card">
         <img width="100" height="100" src="${plantao.farmacia.urllogo}" alt=""/>
 
@@ -84,6 +85,7 @@ function populatePlantoes() {
 }
 function populateFarmacias() {
   const divPlantao = document.getElementById('farmacias-card')
+  divPlantao.innerHTML = ''
   const urlapi = "https://api.lopscorp.com/farmacias"
   fetch(urlapi)
     .then((res) => { return res.json() })

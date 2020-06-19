@@ -13,6 +13,7 @@ body {
   height: 601px;
   border: 0;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 form select {
