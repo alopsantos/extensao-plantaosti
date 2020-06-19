@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Roboto";
+}
+a{text-decoration: none;}
+section{
+  margin-top: 78px;
+}
+section.card {
+  display: flex;
+}
+section.card strong, section.card h2 {
+  margin-top: 8px;
+  display: block;
+  font-weight: 400;
+  color: #4b5c6b;
+}
+section.card ul {
+  margin-top: 8px;
+}
+section.card ul li {
+  display: flex;
+  align-items: center;
+  color: #4b5c6b;
+  font-size: 12px;
+}
+section.card ul li.ativo {
+  color: #6558f6;
+}
+section.card ul li span {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+section.card ul li:first-child {
+  border-left: 2px solid #6558f6;
+}
+.plantao-card-info-map {
+  margin-top: 8px;
+}
+.plantao-card img{
+  border-radius: 8px;
+}
+.farmacias-card{
+  max-width: 332px;
+  width: 332px;
+  display: grid;
+  flex-direction: row;
+}
+.farmacias-card .icon-pharmacy{
+  background-size: 16px 16px;
+}
+.farmacias-card ul{
+  margin-left: 13px;
+  margin-top: 0 !important;
+}
+.farmacia-card{
+  display: flex;
+  margin-bottom: 13px;
+  justify-content: space-between;
+}
+.farmacia-card img{
+  border-radius: 8px;
+}
+ul.arrow{
+  display: flex; 
+  align-items: center;
+}
+ul.arrow li{
+  border:none;
+}
+ul.arrow li span{
+  border-radius: 50%;
+}
