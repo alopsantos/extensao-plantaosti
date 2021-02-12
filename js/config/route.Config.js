@@ -1,7 +1,17 @@
 angular.module("plantaoSti").config(function ($routeProvider) {
-  $routeProvider.when("/plantoes", {
+  $routeProvider.when("/plantao/:id", {
+    templateUrl: "view/plantao.html",
+    controller: "detalhePlantaoCtrl",
+    resolve: {
+      plantao: function (plantoesAPI, $route) {
+        return plantoesAPI.getPlantao($route.current.params.id);
+      },
+    },
+  });
+
+   $routeProvider.when("/plantoes", {
     templateUrl: "view/plantoes.html",
-    controller: "plantaoStiCtrl",
+    controller: "listaPlantoesCtrl",
     resolve: {
       plantoes: function (plantoesAPI) {
         return plantoesAPI.getPlantoes();
@@ -9,11 +19,12 @@ angular.module("plantaoSti").config(function ($routeProvider) {
     },
   });
 
-  $routeProvider.when("/plantao/:id", {
+/*
+  $routeProvider.when("/detalhesPlantao/:id", {
     templateUrl: "view/detalhesPlantao.html",
-    controller: "detalhesPlantaoCtrl",
+    controller: "detalhePlantaoCtrl",
     resolve: {
-      plantoes: function (plantoesAPI, $route) {
+      plantao: function (plantoesAPI, $route) {
         return plantoesAPI.getPlantao($route.current.params.id);
       },
     },
@@ -21,23 +32,23 @@ angular.module("plantaoSti").config(function ($routeProvider) {
 
   $routeProvider.when("/farmacias", {
     templateUrl: "view/farmacias.html",
-    controller: "plantaoStiCtrl",
+    controller: "novoContatoCtrl",
     resolve: {
-      plantoes: function (plantoesAPI) {
-        return plantoesAPI.getPlantoes();
+      farmacias: function (operadorasAPI) {
+        return operadorasAPI.getFarmacias();
       },
     },
   });
 
-  $routeProvider.when("/farmacia/:id", {
+  $routeProvider.when("/detalhesFarmacia/:id", {
     templateUrl: "view/detalhesFarmacia.html",
-    controller: "detalhesFarmaciaCtrl",
+    controller: "novoContatoCtrl",
     resolve: {
-      plantoes: function (plantoesAPI, $route) {
-        return plantoesAPI.getPlantao($route.current.params.id);
+      farmacia: function (contatosAPI, $route) {
+        return contatosAPI.getContato($route.current.params.id);
       },
     },
   });
-
-  $routeProvider.otherwise({redirectTo: "/plantao"});
+ */
+  $routeProvider.otherwise({ redirectTo: "/plantoes" });
 });

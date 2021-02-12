@@ -1,6 +1,6 @@
 angular
   .module("plantaoSti")
-  .controller("farmaciasAPI", function ($http, config) {
+  .factory("farmaciasAPI", function ($http, config) {
     var _getFarmacias = function () {
       return $http.get(config.baseUrl + "/farmacias");
     };

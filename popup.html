@@ -3,85 +3,34 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/app.css" />
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular/angular-messages.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/controllers/detalhesPlantaoCtrl.js"></script>
-    <script src="js/controllers/detalhesFarmaciaCtrl.js"></script>
-    <script src="js/services/farmaciasAPIService.js"></script>
-    <script src="js/services/plantoesAPIService.js"></script>
-    <script src="js/config/route.Config.js"></script>
-    <title>Plantao Sti 7.0</title>
-    <style type="text/css">
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      iframe {
-        width: 340px;
-        height: 600px;
-        border: 0;
-        overflow: hidden;
-      }
-    </style>
-  </head>
+<head>
+	<meta charset="UTF-8">
+	<title>Lista Telefonica</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/itens-lista.css">
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular/angular-route.js"></script>
+	<script src="lib/angular/angular-messages.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/config/route.Config.js"></script>
+	<script src="js/controllers/listaPlantoesCtrl.js"></script>
+	<script src="js/controllers/detalhesPlantaoCtrl.js"></script>
+	<script src="js/services/plantoesAPIService.js"></script>
+	<script src="js/value/configValue.js"></script>
+</head>
+<body>
+	<div class="container-menu">
+		<ul>
+			<li><a href="#">Plantao</a></li>
+			<li><a href="#">Plantoes</a></li>
+			<li><a href="#">Farmacias</a></li>
+		</ul>
+	</div>
 
-  <body ng-controller="plantaoStiCtrl">
-
-	<div ng-view>
+	<div class="container" ng-view>
 
 	</div>
 	<div ng-include="'view/footer.html'"></div>
-    <ul class="farmacias-card">
-      <li ng-repeat="farmacia in farmacias">
-        <a href="farmacia/{{farmacia.id}}">
-          <img
-            src="http://app.lopscorp.com/{{farmacia.urllogo}}"
-            width="150"
-            height="100"
-            alt="Farmacia {{farmacia.name}} - Telefone {{farmacia.phone}}"
-          />
-          <ul>
-            <li><span></span>{{farmacia.name}}</li>
-            <li><span></span>{{farmacia.phone}}</li>
-            <li><span></span>{{farmacia.neighborhood}}</li>
-          </ul>
-        </a>
-      </li>
-    </ul>
-
-    <ul class="plantoes-card">
-      <li ng-repeat="plantao in plantoes">
-        <a href="plantao/{{plantao.id}}">
-          <img
-            src="http://app.lopscorp.com/{{plantao.urllogo}}"
-            width="150"
-            height="100"
-            alt="Farmacia {{plantao.name}} - Telefone {{farmacia.phone}}"
-          />
-          <ul>
-            <li><span></span>{{plantao.name}}</li>
-            <li><span></span>Inicio: {{plantao.datetimestart}}</li>
-            <li><span></span>Fim: {{plantao.datetimeend}}</li>
-          </ul>
-        </a>
-      </li>
-    <ul class="plantao-card">
-      <li ng-repeat="plantao in plantoes">
-        <a href="plantao/{{plantao.id}}">
-          <img
-            src="http://app.lopscorp.com/{{plantao.urllogo}}"
-            width="150"
-            height="100"
-            alt="Farmacia {{plantao.name}} - Telefone {{farmacia.phone}}"
-          />
-          <ul>
-            <li><span></span>{{plantao.name}}</li>
-            <li><span></span>Inicio: {{plantao.datetimestart}}</li>
-            <li><span></span>Fim: {{plantao.datetimeend}}</li>
-          </ul>
-        </a>
-      </li>
-    </ul>
-  </body>
+</body>
 </html>

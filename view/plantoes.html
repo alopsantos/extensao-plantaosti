@@ -1,0 +1,17 @@
+<h2>Plantões</h2>
+<div class="container-list" ng-repeat="plantao in plantoes">
+  <article>
+    <div class="sigla">
+      <span>{{plantao.id}}</span>
+    </div>
+    <div class="detalhes">
+      <h3>{{plantao.name}}</h3>
+      <p>
+        {{plantao.street}} <br />
+        {{plantao.neighborhood}}<br />
+
+        {{plantao.datetimestart}} {{plantao.datetimeend}}
+      </p>
+    </div>
+  </article>
+</div>

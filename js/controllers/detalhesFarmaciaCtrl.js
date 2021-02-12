@@ -2,7 +2,7 @@ angular
   .module("plantaoSti")
   .controller(
     "detalhesFarmaciaCtrl",
-    function ($scope, $routeParams, farmacia) {
+    function ($scope, farmacia) {
       $scope.farmacia = farmacia.data;
     }
   );
