@@ -1,3 +1,4 @@
+
 .container-list {
   position: relative;
   display: flex;
@@ -12,13 +13,16 @@
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
-  z-index: -999;
 }
 .container-list:hover {
-  box-shadow: 3px 3px 3px #ffffff, -3px -3px 3px #b4b4b9;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
+  transition: ease all 0.1s;
 }
-a{
+a {
   text-decoration: none;
 }
 article.itens {
@@ -69,7 +73,7 @@ h3 {
   font-weight: 400;
 }
 p {
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: left;
   line-height: 18px;
   font-size: 10px;
