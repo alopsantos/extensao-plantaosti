@@ -1,4 +1,4 @@
-.container-list {
+.container-item {
   position: relative;
   display: flex;
   overflow: hidden;
@@ -14,14 +14,14 @@
   backdrop-filter: blur(5px);
   z-index: -999;
 }
-.container-list:hover {
+.container-item:hover {
   box-shadow: 3px 3px 3px #ffffff, -3px -3px 3px #b4b4b9;
   cursor: pointer;
 }
 a{
   text-decoration: none;
 }
-article.itens {
+.item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -34,9 +34,9 @@ article.itens {
   margin-left: 15px;
 }
 
-img {
-  width: 64px;
-  height: 64px;
+.item img {
+  width: 270px;
+  height: auto;
   border-radius: 50%;
   border: 1px solid #dfdfdf;
 }
@@ -57,7 +57,7 @@ img {
   margin-left: 0 !important;
 }
 
-.detalhes {
+.item .detalhes {
   padding: 8px;
   text-align: center;
 }
