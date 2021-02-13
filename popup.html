@@ -1,14 +1,14 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" ng-app="plantaoSti">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" href="css/app.css" />
+
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta charset="UTF-8">
-	<title>Lista Telefonica</title>
+	<title>Plantão Sti</title>
 	<link rel="stylesheet" type="text/css" href="css/app.css">
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
-	<link rel="stylesheet" type="text/css" href="css/itens-lista.css">
+	<link rel="stylesheet" type="text/css" href="css/itens-lista-glass.css">
 	<script src="lib/angular/angular.js"></script>
 	<script src="lib/angular/angular-route.js"></script>
 	<script src="lib/angular/angular-messages.js"></script>
@@ -19,18 +19,14 @@
 	<script src="js/services/plantoesAPIService.js"></script>
 	<script src="js/value/configValue.js"></script>
 </head>
+
 <body>
-	<div class="container-menu">
-		<ul>
-			<li><a href="#">Plantao</a></li>
-			<li><a href="#">Plantoes</a></li>
-			<li><a href="#">Farmacias</a></li>
-		</ul>
-	</div>
+	<div ng-include="'view/menu.html'"></div>
 
 	<div class="container" ng-view>
 
 	</div>
 	<div ng-include="'view/footer.html'"></div>
 </body>
+
 </html>
