@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing:antialiased;
 }
 body {
   width: 280px !important;
@@ -9,7 +10,7 @@ body {
   background: #161623;
   color: #fff;
   font-family: "Roboto", Helvetica, sans-serif;
-  min-height: 826px;
+  /* height: 100vh; */
 }
 body::-webkit-scrollbar {
   display: none;

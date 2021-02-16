@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 
-article {
+article.itens {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
